@@ -1,0 +1,6 @@
+raml:
+  container_name: raml
+  build: .
+  command: tail -f /dev/null
+  volumes:
+    - .:/usr/local/app
