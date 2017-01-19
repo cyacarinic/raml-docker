@@ -1,0 +1,28 @@
+
+  <h6 class=" collapse__nav">
+    <a href="#{{ resource.uniqueId }}" class="js-scroll-navigation ellipsis">{% if resource.displayName %}{{ resource.displayName}}{% else %}{{ resource.relativeUri }}{% endif %}</a>
+  </h6>
+  <ul class="collapse__content">
+    {% for method in resource.methods %}
+    <li>
+      <a href="#{{ resource.uniqueId }}_{{ method.method }}" class="js-scroll-navigation"><!-- modal shown by hashchange event -->
+        <span class="badge_{{ method.method }} sidebar--method">{{ method.method }}{% if method.securedBy.length %} <span class="" title=""></span>{% endif %}</span>
+        {% if method.description %}
+        <small>{{ method.description }}</small>
+        {% endif  %}
+      </a>
+    </li>
+    {% endfor %}
+    {% for resource in resource.resources %}
+      {% for method in resource.methods %}
+        <li>
+          <a href="#{{ resource.uniqueId }}_{{ method.method }}" class="js-scroll-navigation"><!-- modal shown by hashchange event -->
+            <span class="badge_{{ method.method }} sidebar--method">{{ method.method }}{% if method.securedBy.length %} <span class="" title=""></span>{% endif %}</span>
+            {% if method.description %}
+            <small>{{ method.description }}</small>
+            {% endif  %}
+          </a>
+        </li>
+      {% endfor %}
+    {% endfor %}
+  </ul>

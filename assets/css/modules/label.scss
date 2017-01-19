@@ -1,0 +1,15 @@
+.circle-indicator {
+  height: 9px;
+  margin-right: 8px;
+  width: 9px;
+  @include border-radius(50%);
+  &.circle-indicator--success {
+    background-color: $color--success;
+  }
+  &.circle-indicator--warning {
+    background-color: $color--warning;
+  }
+  &.circle-indicator--danger {
+    background-color: $color--danger;
+  }
+}

@@ -1,0 +1,173 @@
+#%RAML 0.8
+title: Api Chasqui
+version: v1
+baseUri: http://chasqui.yachay.pe/api/{version}
+
+schemas:
+ - owner: !include schemas/owner.schema
+ - message: !include schemas/message.schema
+ 
+securitySchemes:
+  - auth-token: !include schemas/security.yaml
+
+resourceTypes:
+  - collection: !include utils/types/collection.yaml
+  - collection-item: !include utils/types/resource.yaml
+
+traits:
+  - searchable: !include utils/traits/searchable.yaml
+  - orderable:  !include utils/traits/orderable.yaml
+  - pageable:   !include utils/traits/pageable.yaml
+
+documentation:
+  - title: Api Chasqui
+    content: | 
+      Esta api se encarga de enviar correos predefinidos, el envío lo hace a través de Mailgun.
+
+      Mailgun nos notifica si el correo fue enviado, abierto, clickeado o rebotado.
+      
+      El api se conecta a mailgun de forma asincrona, a través de procesos que tienen un mecanismo de reintentos.
+      
+      <p align="center">
+        <img src="docs/assets/images/model.png" width="600" />
+      </p>
+
+/owners:
+  displayName: asdasd
+  type:
+    collection:
+      exampleItemBase: !include samples/owner-item-base.json
+      exampleItemSaved: !include samples/owner-item-saved.json
+      exampleCollection: !include samples/owner-collection.json
+      resourceName: Propietarios
+      schema: owner
+  /{owner_id}:
+    displayName: Propietario
+    type:
+      collection-item:
+        resourceName: owner
+        translatedResourceName: Propietario
+        exampleItem: !include samples/owner-item-base.json
+        exampleItemSaved: !include samples/owner-item-saved.json
+        schema: owner
+
+/messages:
+  displayName: Mensajes
+  type:
+    collection:
+      exampleItemBase: !include samples/message-item-base.json
+      exampleItemSaved: !include samples/message-item-saved.json
+      exampleCollection: !include samples/message-collection.json
+      resourceName: Mensajes
+      schema: message
+  post:
+    description: Envia un correo predefinido a través de mailgun, si no logra enviar el correo satisfactoriamente hace 4 intentos más.
+    
+  /{message_id}:
+    displayName: Mensaje
+    type:
+      collection-item:
+        translatedResourceName: Mensaje
+        resourceName: message
+        exampleItem: !include samples/message-item-base.json
+        exampleItemSaved: !include samples/message-item-saved.json
+        schema: message
+    put:
+      body:
+        application/json:
+          example: !include samples/message-item-put.json
+
+/messages/{message_id}/attemps:
+  displayName: Intentos
+  description: Lista los intentos que se realizaron para enviar el mensaje a mailgun
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include samples/attemp-collection.json
+
+/messages/{message_id}/attachments:
+  displayName: Adjuntos
+  description: Lista los documentos adjuntos de un mensaje
+  get:
+    description: Lista los documentos adjuntos de un mensaje
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include samples/attachment-collection.json
+
+/messages/{message_id}/events:
+  displayName: Eventos
+  description: Lista los eventos que tiene el mensaje (enviado, clicked, abierto, rebotado)
+  get:
+    description: Lista los eventos que tiene el mensaje (enviado, clicked, abierto, rebotado)
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include samples/event-collection.json
+
+/mailgun:
+  displayName: Mailgun
+  description: Gestiona los eventos que notifica mailgun, todos estos webhooks deben ser validados
+
+  /deliverys:
+    displayName: Enviado
+    description: Recibe el evento Enviado que notifica mailgun
+    post:
+      description: Recibe el evento Enviado que notifica mailgun
+      body:
+        application/json:
+          example: !include samples/delivery.json
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {"message": "ok"}
+  /opens:
+    displayName: Abierto
+    description: Recibe el evento Abierto que notifica mailgun
+    post:
+      description: Recibe el evento Abierto que notifica mailgun
+      body:
+        application/json:
+          example: !include samples/open.json
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {"message": "ok"}
+  /clicks:
+    displayName: Clickeado
+    description: Recibe el evento Clickeado que notifica mailgun
+    post:
+      description: Recibe el evento Clickeado que notifica mailgun
+      body:
+        application/json:
+          example: !include samples/click.json
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {"message": "ok"}
+                
+  /drops:
+    displayName: Rechazado
+    description: Recibe el evento Rechazado que notifica mailgun
+    post:
+      description: Recibe el evento Rechazado que notifica mailgun
+      body:
+        application/json:
+          example: !include samples/drop.json
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {"message": "ok"}
+  

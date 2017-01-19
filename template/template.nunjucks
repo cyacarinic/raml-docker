@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>{{ title }} API documentation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="generator" content="https://github.com/raml2html/raml2html {{ config.raml2HtmlVersion }}">
+
+    <link rel="stylesheet" href="dist/css/styles.min.css">
+
+    <link rel="icon" type="image/png" sizes="192x192"  href="dist/icons/android-icon-192x192.png">
+
+  </head>
+
+  <body data-spy="scroll" data-target="#sidebar">
+    <div class="wrapper">
+      <div class="wrapper-inner">
+        <div class="page-header">
+          <div class="display-table">
+            <div class="display-table-cell header__logo">
+              <img src="dist/images/logo.png" width="80" alt="RCP" />
+            </div>
+            <div class="display-table-cell">
+              <h1>{{ title }} {% if version %} <small>version {{ version }}</small>{% endif %}</h1>
+              <p>{{ baseUri }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="page-sidebar">
+          <div class="page-sidebar__inner js-page-sidebar">
+            {% if documentation %}
+              <div class="collapse js-collapse">
+                <h6 class="collapse__nav">
+                  <a href="#Documentación" class="js-scroll-navigation">
+                    Documentación
+                  </a>
+                </h6>
+                <ul class="collapse__content">
+                  {% for chapter in documentation %}
+                  <li><a href="#{{ chapter.title | replace(" ", "-") }}" class="js-scroll-navigation">{{ chapter.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+
+            {% for resource in resources %}
+              <div class="collapse js-collapse">
+                {% include "./sidebar.nunjucks" %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="page-content js-page-scroll">
+
+          {% for chapter in documentation %}
+          <div id="Documentación"></div>
+          <div class="panel">
+            <div class="markdown">
+              <div class="doc-header">
+                <div id="{{ chapter.title | replace(" ", "-") }}" class="panel-heading {% if loop.index==1 %}no-border-top{% endif %}">
+                  {% markdown %}<h1>{{ chapter.title }}</h1>{% endmarkdown %}
+                </div>
+              </div>
+              <div class="doc-body">
+                <div id="{{ chapter.uniqueId }}">
+                  {% markdown %}{{ chapter.content }}{% endmarkdown %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% for resource in resources %}
+            <div class="panel panel-default">
+              <div id="{{ resource.uniqueId }}" class="panel-heading" >
+                <h1  class="panel-title">
+                  {% if resource.displayName %}{{ resource.displayName}}{% else %}{{ resource.relativeUri }}{% endif %}
+                </h1>
+              </div>
+
+              <div class="panel-body">
+                <div class="panel-group">
+                  {% include "./resource.nunjucks" %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    {# JS #}
+    <script src="dist/js/jquery.min.js" type="text/javascript"></script>
+    <script src="dist/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="dist/js/highlight.min.js" type="text/javascript"></script>
+    <script src="dist/js/scripts.js" type="text/javascript"></script>
+  </body>
+</html>

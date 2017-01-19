@@ -1,0 +1,14 @@
+table {
+  border-spacing: 0.5rem;
+  border-collapse: collapse;
+  th {
+    background-color: $color__gray--light;
+    border: 1px solid darken($color__gray--light, 5%);
+    font-weight: 400;
+    padding: 1rem;
+  }
+  td {
+    border: 1px solid $color__gray--light;
+    padding: .6rem 1rem;
+  }
+}

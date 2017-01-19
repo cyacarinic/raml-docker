@@ -1,0 +1,20 @@
+{
+  "city": "San Francisco",
+  "domain": "staging.punto.pe",
+  "device-type": "desktop",
+  "my_var_1": "Mailgun Variable #1",
+  "country": "US",
+  "region": "CA",
+  "client-name": "Chrome",
+  "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31",
+  "client-os": "Linux",
+  "my-var-2": "awesome",
+  "ip": "50.56.129.169",
+  "client-type": "browser",
+  "recipient": "alice@example.com",
+  "event": "opened",
+  "timestamp": "1484062018",
+  "token": "33cd08cd9b636191b4252557f981292176e442af55e95ca147",
+  "signature": "d60a89b91d444b96e6f4ab1b2b8de872f23087d29f652286f5b5b315f8a19c82",
+  "body-plain": ""
+}

@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {"type": "uuid"},
+    "to": {"type": "string"},
+    "sender": {"type": "string"},
+    "cc": {"type": "string"},
+    "metadata": {"type": "string"},
+    "mailgunId": {"type": "string"},
+    "subject": {"type": "string"},
+    "templateId": {"type": "uuid"},
+    "messageStatusId": {"type": "uuid"},
+    "ownerId": {"type": "uuid"},
+    "messageTypeId": {"type": "uuid"},
+    "typeDescription": {"type": "string"},
+    "created": {"type": "date"},
+    "updated": {"type": "date"}
+  },
+  "required": ["to","sender","subject","templateId","ownerId","messageTypeId"]
+}

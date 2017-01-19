@@ -1,0 +1,17 @@
+{
+  "to": "carlos@gmail.com",
+  "sender": "nic.@punto.pe",
+  "cc": "",
+  "metadata": "{}",
+  "subject": "Cambio de dns",
+  "templateId": "8fa5fff5-1392-4b73-8981-2d1c599e5522",
+  "ownerId": "8fa5fff5-1392-4b73-8981-2d1c599e5512",
+  "messageTypeId": "8fa5fff5-1392-4b73-8981-2d1c599e5544",
+  "typeDescription": "miempresa.pe",
+  "attachments":[
+    {
+      "filename":"reporte.xls",
+      "data":"AC6AC5B66A4B6446BA46BA46A464BA64C64A6A4C6A46AC46ABC46B4A6464CAB6C4BA64B646A4B64A6B4B644AB46BA4C=="
+    }
+  ]
+}

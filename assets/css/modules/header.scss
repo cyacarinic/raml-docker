@@ -1,0 +1,25 @@
+.page-header {
+  background-color: $bg__header;
+  border-bottom: 1px solid $color__gray--light;
+  color: #fff;
+  height: 100px;
+  left: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  h1 {
+    color: #fff;
+    margin-bottom: .1rem;
+    small {
+      color: lighten($color__gray, 20%);
+    }
+  }
+  p {
+    color: lighten($color__gray, 20%);
+  }
+  .header__logo {
+    width: 100px;
+  }
+}

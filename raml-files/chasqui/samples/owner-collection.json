@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "count": 10,
+    "limit": 2,
+    "offset": 4
+  },
+  "results": [
+    {
+      "id": "8fa5fff5-1392-4b73-8981-2d1c599e5533",
+      "name":"Claudia Cespedes",
+      "email":"ccespedes@rcp.pe",
+      "user":"ccespedes",
+      "created": "2016-11-03T17:38:33.934Z",
+      "updated": "2016-11-03T17:38:33.934Z"
+    },
+    {
+      "id": "8fa5fff5-1392-4b73-8981-2d1c599e55bd",
+      "name":"Cinthia alcorta",
+      "email":"calcorta@rcp.pe",
+      "user":"calcorta",
+      "created": "2016-14-03T17:38:33.934Z",
+      "updated": "2016-14-03T17:38:33.934Z"
+    }
+  ]
+}

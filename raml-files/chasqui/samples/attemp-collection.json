@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "count": 10,
+    "limit": 2,
+    "offset": 4
+  },
+  "results": [
+    {
+      "description": "1st attemp",
+      "code":500,
+      "response": "Service unavailable",
+      "created": "2016-11-03T03:38:33.934Z"
+    },
+    {
+      "description": "2nd attemp",
+      "code":500,
+      "response": "Service unavailable",
+      "created": "2016-11-03T04:38:33.934Z"
+    },
+    {
+      "description": "3rd attemp",
+      "code":200,
+      "response": "ok",
+      "created": "2016-11-03T05:38:33.934Z"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+type: x-auth-token
+describedBy:
+  headers:
+    Authorization:
+      type: string
+      example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOjUsInV...
+      required: true

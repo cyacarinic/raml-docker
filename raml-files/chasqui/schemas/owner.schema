@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {"type": "uuid"},
+    "name": {"type": "string"},
+    "email": {"type": "string"},
+    "user": {"type": "string"},
+    "created": {"type": "date"},
+    "updated": {"type": "date"}
+  },
+  "required": ["name","email","user"]
+}

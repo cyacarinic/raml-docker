@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "count": 10,
+    "limit": 2,
+    "offset": 4
+  },
+  "results": [
+    {
+      "id": "8fa5fff5-1392-4b73-8981-2d1c599e55bd",
+      "to": "carlos@gmail.com",
+      "sender": "nic.@punto.pe",
+      "cc": "",
+      "metadata": "{}",
+      "mailgunId": "jxksjn2idjoij2id2do2io3i23d",
+      "subject": "Cambio de dns",
+      "templateId": "8fa5fff5-1392-4b73-8981-2d1c599e5522",
+      "messageStatusId": "8fa5fff5-1392-4b73-8981-2d1c599e5500",
+      "ownerId": "8fa5fff5-1392-4b73-8981-2d1c599e5512",
+      "messageTypeId": "8fa5fff5-1392-4b73-8981-2d1c599e5544",
+      "typeDescription": "miempresa.pe",
+      "created": "2016-11-03T17:38:33.934Z",
+      "updated": "2016-11-03T17:38:33.934Z"
+    },
+    {
+      "id": "8fa5fff5-1392-4b73-8981-2d1c599e5532",
+      "to": "carlos@gmail.com",
+      "sender": "nic.@punto.pe",
+      "cc": "",
+      "metadata": "{}",
+      "mailgunId": "d23udi2un32o3id4oi2oi1o1i1o",
+      "subject": "Cambio de dns",
+      "templateId": "8fa5fff5-1392-4b73-8981-2d1c599e5594",
+      "messageStatusId": "8fa5fff5-1392-4b73-8981-2d1c599e5584",
+      "ownerId": "8fa5fff5-1392-4b73-8981-2d1c599e5509",
+      "messageTypeId": "8fa5fff5-1392-4b73-8981-2d1c599e5512",
+      "typeDescription": "miempresa.pe",
+      "created": "2016-11-03T17:38:33.934Z",
+      "updated": "2016-11-03T17:38:33.934Z"
+    }
+  ]
+}

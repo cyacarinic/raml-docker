@@ -1,12 +1,16 @@
-FROM node:6.3.0
-#RUN apt-get update
-#RUN apt-get install -y vim
+FROM iojs:3.3
 
-RUN mkdir /usr/local/app
+ADD package.json /tmp/package.json
+RUN cd /tmp && npm install
+
+RUN mkdir -p /usr/local/app && cp -a /tmp/node_modules /usr/local/app
 WORKDIR /usr/local/app
 
-ADD ./package.json /usr/local/app
+#RUN echo '#!/bin/bash\n./tmp/node_modules/gulp/bin/gulp.js' > /usr/bin/gulp
+#RUN chmod +x /usr/bin/gulp
 
-RUN npm install -g 
+RUN ln -s /tmp/node_modules/gulp/bin/./gulp.js /usr/bin/gulp
 
 ADD . /usr/local/app
+
+EXPOSE 8000

@@ -1,0 +1,13 @@
+queryParameters:
+  offset:
+    description: Salta sobre un número de elementos mediante la especificación de un valor de desplazamiento (offset) para la consulta
+    type: integer
+    required: false
+    example: 20
+    default: 0
+  limit:
+    description: Limita el número de elementos en la respuesta
+    type: integer
+    required: false
+    example: 80
+    default: 0

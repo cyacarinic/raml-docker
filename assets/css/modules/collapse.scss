@@ -1,0 +1,19 @@
+.collapse {
+  margin-bottom: .6rem;
+  .collapse__nav {
+
+  }
+  .collapse__content {
+    display: none;
+  }
+  &.active {
+    .collapse__nav {
+      a {
+        color: $color__blue;
+      }
+    }
+    .collapse__content {
+      display: block;
+    }
+  }
+}

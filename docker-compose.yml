@@ -1,6 +1,9 @@
 raml:
   container_name: raml
   build: .
-  command: tail -f /dev/null
+  command: /usr/bin/gulp --path raml-files/chasqui/index.raml
   volumes:
-    - .:/usr/local/app
+    - ./raml-files:/usr/local/app/raml-files
+    - ./docs:/usr/local/app/docs
+  ports:
+    - "1234:8000"

@@ -1,0 +1,231 @@
+html, body {
+  height: 100%;
+  min-width: 1024px;
+}
+
+html {
+  font-size: 16px;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.wrapper-inner {
+  height: 100%;
+  padding-left: 300px;
+  padding-top: 100px;
+  position: relative;
+}
+
+.page-content {
+  height: 100%;
+  opacity: 0;
+  overflow-x: hidden;
+  visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+  @include transition(opacity .52s, visibility .52s);
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.panel-heading {
+  border-top: 1px solid $color__gray--light;
+  padding: 30px 60px;
+  h1 {
+    margin-bottom: 0;
+  }
+  h2 {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+}
+
+pre {
+  background-color: $color__blue--light;
+  border-left: .25rem solid darken($color__blue--light, 6%);
+  color: darken($color__gray, 20%);
+  font-size: .82rem;
+  line-height: 1.8rem;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  overflow: auto;
+  padding: 1rem 2rem;
+  code {
+    line-height: 1.15rem;
+  }
+}
+
+code {
+  background-color: $color__blue--light;
+  color: darken($color__gray, 20%);
+  display: inline-block;
+  font-size: .82rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  @include border-radius(.2rem);
+}
+
+.list-group {
+  background-color: $color__blue--light;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.top-resource-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.modal-title {
+  background-color: $color__blue--light;
+  border: 1px solid $color__gray--light;
+  font-weight: bold;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem 2.5rem;
+  h4 {
+    margin-bottom: 0;
+  }
+}
+
+.badge {
+  text-transform: uppercase;
+  font-weight: 400;
+  padding-right: 10px;
+}
+
+.badge_get {
+  color: $color--success;
+}
+
+.badge_post {
+  color: $color--info;
+}
+
+.badge_put {
+  color: $color--method-put;
+}
+
+.badge_delete {
+  color: $color--danger;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid $color__gray--light;
+  margin-top: 2rem;
+  overflow: hidden;
+  a {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 3px solid transparent;
+    display: block;
+    float: left;
+    padding: 15px 20px;
+    &:hover {
+      background-color: lighten($color__gray--light, 4%);
+    }
+    &.active {
+      background-color: $color__blue--light;
+      border-left-color: $color__gray--light;
+      border-right-color: $color__gray--light;
+      border-top-color: $color__blue;
+    }
+  }
+}
+
+.tab-content {
+  .tab-content__inner {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  .tab-pane__inner--mini {
+    padding: 1rem 1.5rem;
+  }
+  .tab-pane {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
+
+
+// STATUS
+
+.status {
+  border: 1px solid $color__gray--light;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  > .display-table {
+    table-layout: fixed;
+  }
+  .status-value {
+    border-right: 1px solid $color__gray--light;
+    width: 100px;
+    .status-value__item {
+      display: inline-block;
+      padding: 6px 11px;
+      width: 100%;
+      &:hover {
+        background-color: lighten($color__blue--light, 5%);
+      }
+      &:active {
+        background-color: lighten($color__blue--light, 3%);
+      }
+      &.active {
+        background-color: $color__blue--light;
+      }
+    }
+  }
+  .status-description {
+    border-right: 1px solid $color__gray--light;
+    .status-description-header {
+      padding: 6px 15px;
+      border-bottom: 1px solid $color__gray--light;
+      a {
+        margin-right: 12px;
+      }
+    }
+    .status-description-body {
+
+    }
+  }
+}
+
+
+// DOCUMENTATION
+
+.doc-header {
+  border-bottom: 1px solid $color__gray--light;
+}
+
+.doc-body {
+  padding: 40px 60px;
+}
+
+
+// RESOURCES
+
+.resource-header {
+  background-color: $color__blue--light;
+  border-bottom: 1px solid $color__gray--light;
+  border-top: 1px solid $color__gray--light;
+  padding: 30px 60px;
+  h2 {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.resource-body {
+  padding: 40px 60px;
+}
+
+
+// OVERWRITE HIGHTLIGHT
+
+.hljs {
+  background: transparent;
+}

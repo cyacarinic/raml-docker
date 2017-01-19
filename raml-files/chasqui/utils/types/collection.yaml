@@ -1,0 +1,22 @@
+description: Colección general de <<resourceName>>
+get:
+  description: Obtiene un listado general de <<resourceName>>
+  responses:
+    200:
+      body:
+        application/json:
+          example: |
+            <<exampleCollection>>
+post:
+  description: |
+    Agrega un(a) nuevo(a) <<resourceName|!singularize>> a la base de datos.
+  body:
+    application/json:
+      schema: <<schema>>
+      example: <<exampleItemBase>>
+  responses:
+    200:
+      body:
+        application/json:
+          example: |
+            <<exampleItemSaved>>

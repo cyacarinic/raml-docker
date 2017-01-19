@@ -1,0 +1,7 @@
+queryParameters:
+  sort:
+    description: |
+      Ordena en base a los atributos
+    example: -firstname
+    type: string
+    required: false

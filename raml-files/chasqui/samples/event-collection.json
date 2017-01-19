@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "count": 10,
+    "limit": 2,
+    "offset": 4
+  },
+  "results": [
+    {
+      "id": "8fa5fff5-1392-4b73-8981-2d1c599e55bd",
+      "created": "2016-11-03T17:38:33.934Z",
+      "eventTypeId": "8fa5fff5-1392-4b73-8981-2d1c599e5512",
+      "reason": "",
+      "body": "{\"Message-Id\": \"<20130503192659.13651.20207@staging.punto.pe>\", \"X-Mailgun-Sid\": \"WyIwNzI5MCIsICJpZG91YnR0aGlzb25lZXhpc3RzQGdtYWlsLmNvbSIsICI2Il0=\", \"attachment-count\": \"1\", \"body-plain\": \"xxx\", ..... }"
+    },
+    {
+      "id": "8fa5fff5-1392-4b73-8981-2d1c599e55bd",
+      "created": "2016-11-03T17:38:33.934Z",
+      "eventTypeId": "8fa5fff5-1392-4b73-8981-2d1c599e5512",
+      "reason": "Mail Server Fail",
+      "body": "{\"Message-Id\": \"<20130503192659.13651.20289@staging.punto.pe>\", \"X-Mailgun-Sid\": \"WyIwNzI5MCIsICJpZG91YnR0aGlzb25lZXhpc3RzQGdtYWlsLmNvbSIsICI2Il0=\", \"attachment-count\": \"1\", \"body-plain\": \"xxx\", ..... }"
+    }
+    
+  ]
+}

@@ -1,0 +1,99 @@
+.markdown {
+  p {
+    margin-bottom: 1.3rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 1.414rem 0 .5rem;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  small {
+    font-size: .707em;
+  }
+
+  /* https://github.com/mrmrs/fluidity */
+
+  canvas,
+  iframe,
+  video,
+  svg,
+  select,
+  textarea {
+    max-width: 100%;
+  }
+
+
+  a,
+  a:visited {
+    color: #3498db;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    color: #2980b9;
+  }
+
+  code {
+    font-family: monospace,monospace;
+  }
+
+  pre {
+    font-family: monospace,monospace;
+    text-align: left;
+    code {
+      font-family: monospace,monospace;
+    }
+  }
+
+  blockquote {
+    margin: 0;
+    border-left: 5px solid #7a7a7a;
+    font-style: italic;
+    padding: 1.33em;
+    text-align: left;
+  }
+
+  ul {
+    margin-bottom: 16px;
+    padding-left: 2rem;
+    ul {
+      margin-bottom: .5rem;
+    }
+    li {
+      list-style-type: disc;
+      margin-bottom: .5rem;
+      li {
+        list-style-type: circle;
+        li {
+          list-style-type: square;
+        }
+      }
+    }
+  }
+
+  ol {
+    padding-left: 2rem;
+    margin-bottom: 16px;
+    li {
+      list-style-type: decimal;
+    }
+  }
+
+  ul,
+  ol,
+  li {
+    text-align: left;
+  }
+
+  ol {
+
+  }
+}

@@ -1,0 +1,59 @@
+description: Entidad representativa de <<translatedResourceName|!singularize>>
+
+get:
+  description: Obtiene el(la) <<translatedResourceName|!singularize>> con el "id" = {<<resourceName|!singularize>>_id}
+  responses:
+    200:
+      body:
+        application/json:
+          example: |
+            <<exampleItemSaved>>
+    404:
+      body:
+        application/json:
+          example: |
+            {
+              "status": 404,
+              "developerMessage": "ID not exists",
+              "userMessage": "<<translatedResourceName|!singularize>> no existe"
+            }
+put:
+  description: Modifica el(la) <<translatedResourceName|!singularize>> con el "id" = {<<resourceName|!singularize>>_id}
+  body:
+    application/json:
+      example: <<exampleItem>>
+      schema: <<schema>>
+  responses:
+    200:
+      body:
+        application/json:
+          example: <<exampleItemSaved>>
+    404:
+      body:
+        application/json:
+          example: |
+            {
+                "status": 404,
+                "developerMessage": "ID not exists",
+                "userMessage": "<<translatedResourceName|!singularize>> no existe"
+            }
+
+delete:
+  description: Elimina el(la) <<translatedResourceName|!singularize>> con el "id" = {<<resourceName|!singularize>>_id}
+  responses:
+    200:
+      body:
+        application/json:
+          example: |
+            {
+                "status": 200
+            }
+    404:
+      body:
+        application/json:
+          example: |
+            {
+                "status": 404,
+                "developerMessage": "ID not exists",
+                "userMessage": "<<translatedResourceName|!singularize>> no existe"
+            }

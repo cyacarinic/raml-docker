@@ -1,0 +1,123 @@
+// CUSTOM FONTS - FLAMA
+
+@font-face {
+  font-family: 'Flama';
+  src: url('../fonts/Flama-LightItalic.eot?#iefix') format('embedded-opentype'),  url('../fonts/Flama-LightItalic.otf')  format('opentype'),
+	     url('../fonts/Flama-LightItalic.woff') format('woff'), url('../fonts/Flama-LightItalic.ttf')  format('truetype'), url('../fonts/Flama-LightItalic.svg#../fonts/Flama-LightItalic') format('svg');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Flama';
+  src: url('../fonts/Flama-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/Flama-Light.otf')  format('opentype'),
+	     url('../fonts/Flama-Light.woff') format('woff'), url('../fonts/Flama-Light.ttf')  format('truetype'), url('../fonts/Flama-Light.svg#../fonts/Flama-Light') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Flama';
+  src: url('../fonts/Flama-Book.eot?#iefix') format('embedded-opentype'),  url('../fonts/Flama-Book.otf')  format('opentype'),
+	     url('../fonts/Flama-Book.woff') format('woff'), url('../fonts/Flama-Book.ttf')  format('truetype'), url('../fonts/Flama-Book.svg#../fonts/Flama-Book') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Flama';
+  src: url('../fonts/Flama-Basic.eot?#iefix') format('embedded-opentype'),  url('../fonts/Flama-Basic.otf')  format('opentype'),
+	     url('../fonts/Flama-Basic.woff') format('woff'), url('../fonts/Flama-Basic.ttf')  format('truetype'), url('../fonts/Flama-Basic.svg#Flama-Basic') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+// CUSTOM FONT - SOURCE PRO
+
+@font-face {
+  font-family: 'SourceCodePro-Regular';
+  src: url('../fonts/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/SourceCodePro-Regular.woff') format('woff'), url('../fonts/SourceCodePro-Regular.ttf')  format('truetype'), url('../fonts/SourceCodePro-Regular.svg#SourceCodePro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+// TYPOGRAPHY
+// ----------------------------------
+
+* {
+  font-family: 'Flama';
+}
+
+a {
+  &:hover,
+  &.active {
+    color: $color__blue;
+  }
+}
+
+p,
+li {
+  line-height: 1.8rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color__blue--dark;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.8rem;
+  margin-top: 2.2rem;
+}
+
+h2:first-child { margin-top: 0; }
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.8rem;
+  margin-top: 1.8rem;
+}
+
+h3:first-child { margin-top: 0; }
+
+h4 { font-size: 1rem; }
+
+h5 { font-size: .9rem; }
+
+h6 { font-size: .8rem; }
+
+
+@media (min-width: 768px) {
+  h1 { font-size: 1.9rem; }
+
+  h2 { font-size: 1.7rem; }
+
+  h3 { font-size: 1.5rem; }
+
+  h4 { font-size: 1.3rem; }
+
+  h5 { font-size: 1.1rem; }
+
+  h6 { font-size: .9rem; }
+}
+
+b, strong { font-weight: bold; }
+
+small {
+  font-size: .9rem;
+  line-height: .9;
+}
+
+code, code *,
+pre, pre * {
+  font-family: 'SourceCodePro-Regular';
+}

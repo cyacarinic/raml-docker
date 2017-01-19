@@ -1,0 +1,13 @@
+{
+  "domain": "staging.punto.pe",
+  "my_var_1": "Mailgun Variable #1",
+  "my-var-2": "awesome",
+  "message-headers": "[[\"Received\", \"by luna.mailgun.net with SMTP mgrt 8734663311733; Fri, 03 May 2013 18:26:27 +0000\"], [\"Content-Type\", [\"multipart/alternative\", {\"boundary\": \"eb663d73ae0a4d6c9153cc0aec8b7520\"}]], [\"Mime-Version\", \"1.0\"], [\"Subject\", \"Test deliver webhook\"], [\"From\", \"Bob <bob@staging.punto.pe>\"], [\"To\", \"Alice <alice@example.com>\"], [\"Message-Id\", \"<20130503182626.18666.16540@staging.punto.pe>\"], [\"X-Mailgun-Variables\", \"{\\"my_var_1\\": \\"Mailgun Variable #1\\", \\"my-var-2\\": \\"awesome\\"}\"], [\"Date\", \"Fri, 03 May 2013 18:26:27 +0000\"], [\"Sender\", \"bob@staging.punto.pe\"]]",
+  "Message-Id": "<20130503182626.18666.16540@staging.punto.pe>",
+  "recipient": "alice@example.com",
+  "event": "delivered",
+  "timestamp": "1484061278",
+  "token": "35bf5ec231121c99d0d42ecf66ce48df574c7cac0648d0896a",
+  "signature": "2a20bf192d1b22f452236051c7422523fd7901cf511d48405a23f4143bbbeeb7",
+  "body-plain":""
+}
