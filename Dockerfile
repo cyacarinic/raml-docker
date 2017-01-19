@@ -13,4 +13,4 @@ RUN ln -s /tmp/node_modules/gulp/bin/./gulp.js /usr/bin/gulp
 
 ADD . /usr/local/app
 
-EXPOSE 8000
+EXPOSE 3000

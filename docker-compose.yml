@@ -6,4 +6,4 @@ raml:
     - ./raml-files:/usr/local/app/raml-files
     - ./docs:/usr/local/app/docs
   ports:
-    - "1234:8000"
+    - "3000:3000"
